@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
               <MuiLink
                 component={Link}
-                to="/"
+                to="/home"
                 color="inherit"
                 underline="hover"
               >
@@ -67,7 +67,6 @@ const Footer: React.FC = () => {
                 component="a"
                 href="https://twitter.com/noahkeen22"
                 target="_blank"
-                rel="noopener noreferrer"
                 sx={{ color: "#fff" }}
               >
                 <Twitter />
@@ -76,7 +75,6 @@ const Footer: React.FC = () => {
                 component="a"
                 href="https://www.linkedin.com/in/noah-keen-1110a6195/"
                 target="_blank"
-                rel="noopener noreferrer"
                 sx={{ color: "#fff" }}
               >
                 <LinkedIn />
@@ -85,7 +83,6 @@ const Footer: React.FC = () => {
                 component="a"
                 href="https://www.instagram.com/noahkeen/"
                 target="_blank"
-                rel="noopener noreferrer"
                 sx={{ color: "#fff" }}
               >
                 <Instagram />

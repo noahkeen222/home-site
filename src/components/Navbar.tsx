@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
           <Grid container alignItems="center" size="auto" gap={2}>
             <Avatar
               onClick={handleHomeClick}
-              src="public/assets/avatar.jpg"
+              src={new URL('../assets/avatar.jpg', import.meta.url).href}
               sx={{ width: 40, height: 40, cursor: 'pointer' }}
             />
             <Typography
@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
           </Grid>
 
           <Grid container size="auto" gap={1}>
-            <Button sx={{ color: "#fff" }} component={Link} to="/">
+            <Button sx={{ color: "#fff" }} component={Link} to="/home">
               Home
             </Button>
             <Button sx={{ color: "#fff" }} component={Link} to="/about">
