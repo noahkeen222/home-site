@@ -10,9 +10,6 @@ import {
 } from "@mui/material";
 
 const Navbar: React.FC = () => {
-  const handleHomeClick = () => {
-    window.location.reload();
-  };
 
   return (
     <AppBar
@@ -34,13 +31,11 @@ const Navbar: React.FC = () => {
         >
           <Grid container alignItems="center" size="auto" gap={2}>
             <Avatar
-              onClick={handleHomeClick}
               src={new URL('../assets/avatar.jpg', import.meta.url).href}
               sx={{ width: 40, height: 40, cursor: 'pointer' }}
             />
             <Typography
               variant="h6"
-              onClick={handleHomeClick}
               sx={{
                 cursor: "pointer",
                 color: "#fff",
@@ -52,13 +47,13 @@ const Navbar: React.FC = () => {
           </Grid>
 
           <Grid container size="auto" gap={1}>
-            <Button sx={{ color: "#fff" }} component={Link} to="/home">
+            <Button sx={{ color: "#fff" }} component={Link} to="/home-site/">
               Home
             </Button>
-            <Button sx={{ color: "#fff" }} component={Link} to="/about">
+            <Button sx={{ color: "#fff" }} component={Link} to="/about/">
               About
             </Button>
-            <Button sx={{ color: "#fff" }} component={Link} to="/contact">
+            <Button sx={{ color: "#fff" }} component={Link} to="/contact/">
               Contact
             </Button>
           </Grid>

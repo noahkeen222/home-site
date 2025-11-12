@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
               <MuiLink
                 component={Link}
-                to="/home"
+                to="/home-site/"
                 color="inherit"
                 underline="hover"
               >
