@@ -15,8 +15,8 @@ function App() {
         <Box component="main" sx={{ flexGrow: 1 }}>
           <Routes>
             <Route path="/home-site/" element={<Home />} />
-            <Route path="/home-site/about" element={<About />} />
-            <Route path="/home-site/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </Box>
         <Footer />

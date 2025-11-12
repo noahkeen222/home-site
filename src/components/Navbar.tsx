@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
         >
           <Grid container alignItems="center" size="auto" gap={2}>
             <Avatar
-              onClick={}
+              onClick={handleHomeClick}
               src={new URL('../assets/avatar.jpg', import.meta.url).href}
               sx={{ width: 40, height: 40, cursor: 'pointer' }}
             />
