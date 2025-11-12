@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
                 borderColor: '#3d3672'
               }}
               alt="Shoggoth the African Dwarf Frog clicking heels together"
-              src="src/assets/shoggoth_heel_click.jpg"
+              src="/src/assets/shoggoth_heel_click.jpg"
             >
             </Box>
           </Grid>
