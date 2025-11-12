@@ -18,12 +18,10 @@ const Home: React.FC = () => {
         <Grid size={12}>
           <Typography variant="body1" sx={{ fontSize: "1rem" }}>
             Hello 👋 welcome to my webpage!
-          </Typography>
-          <Typography variant="body1" sx={{ fontSize: "1rem" }}>
+            <br />
             There isnt much here yet but check
             back later for more cool updates and fun stuff.
-          </Typography>
-          <Typography>
+            <br />
             Thank you for visiting!
           </Typography>
         </Grid>
