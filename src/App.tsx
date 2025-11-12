@@ -14,7 +14,7 @@ function App() {
         <Navbar />
         <Box component="main" sx={{ flexGrow: 1 }}>
           <Routes>
-            <Route path="/" element={<Navigate to="home-site" replace />} />
+            <Route path="/" element={<Navigate to="home" replace />} />
             <Route path="home" element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
