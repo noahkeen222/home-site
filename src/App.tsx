@@ -14,7 +14,7 @@ function App() {
         <Navbar />
         <Box component="main" sx={{ flexGrow: 1 }}>
           <Routes>
-            <Route path="/home-site/" element={<Home />} />
+            <Route path="/home-site" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
