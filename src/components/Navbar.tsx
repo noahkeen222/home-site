@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -10,8 +10,10 @@ import {
 } from "@mui/material";
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
+
   const handleHomeClick = () => {
-    window.location.reload();
+    navigate('/home-site/')
   };
 
   return (
@@ -34,7 +36,7 @@ const Navbar: React.FC = () => {
         >
           <Grid container alignItems="center" size="auto" gap={2}>
             <Avatar
-              onClick={handleHomeClick}
+              onClick={}
               src={new URL('../assets/avatar.jpg', import.meta.url).href}
               sx={{ width: 40, height: 40, cursor: 'pointer' }}
             />
@@ -55,10 +57,10 @@ const Navbar: React.FC = () => {
             <Button sx={{ color: "#fff" }} component={Link} to="/home-site/">
               Home
             </Button>
-            <Button sx={{ color: "#fff" }} component={Link} to="/home-site/about/">
+            <Button sx={{ color: "#fff" }} component={Link} to="/about/">
               About
             </Button>
-            <Button sx={{ color: "#fff" }} component={Link} to="/home-site/contact/">
+            <Button sx={{ color: "#fff" }} component={Link} to="/contact/">
               Contact
             </Button>
           </Grid>

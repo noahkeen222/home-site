@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
               </MuiLink>
               <MuiLink
                 component={Link}
-                to="/home-site/about"
+                to="/about"
                 color="inherit"
                 underline="hover"
               >
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
               </MuiLink>
               <MuiLink
                 component={Link}
-                to="/home-site/contact"
+                to="/contact"
                 color="inherit"
                 underline="hover"
               >
