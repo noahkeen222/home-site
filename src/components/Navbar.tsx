@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
 
   const handleHomeClick = () => {
-    navigate('/home-site/')
+    navigate('home')
   };
 
   return (
