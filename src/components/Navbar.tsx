@@ -10,6 +10,9 @@ import {
 } from "@mui/material";
 
 const Navbar: React.FC = () => {
+  const handleHomeClick = () => {
+    window.location.reload();
+  };
 
   return (
     <AppBar
@@ -31,11 +34,13 @@ const Navbar: React.FC = () => {
         >
           <Grid container alignItems="center" size="auto" gap={2}>
             <Avatar
+              onClick={handleHomeClick}
               src={new URL('../assets/avatar.jpg', import.meta.url).href}
               sx={{ width: 40, height: 40, cursor: 'pointer' }}
             />
             <Typography
               variant="h6"
+              onClick={handleHomeClick}
               sx={{
                 cursor: "pointer",
                 color: "#fff",
