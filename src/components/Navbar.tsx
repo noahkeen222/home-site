@@ -57,10 +57,10 @@ const Navbar: React.FC = () => {
             <Button sx={{ color: "#fff" }} component={Link} to="/home-site/">
               Home
             </Button>
-            <Button sx={{ color: "#fff" }} component={Link} to="/about/">
+            <Button sx={{ color: "#fff" }} component={Link} to="/about">
               About
             </Button>
-            <Button sx={{ color: "#fff" }} component={Link} to="/contact/">
+            <Button sx={{ color: "#fff" }} component={Link} to="/contact">
               Contact
             </Button>
           </Grid>
