@@ -17,7 +17,7 @@ const About: React.FC = () => {
               borderColor: '#3d3672'
             }}
             alt="Shoggoth the African Dwarf Frog looking wistfully in the cornner"
-            src="./src/assets/shoggoth.jpg"
+            src="images/shoggoth.jpg"
           >
           </Box>
         </Grid>
@@ -58,7 +58,7 @@ const About: React.FC = () => {
               borderColor: '#3d3672'
             }}
             alt="Noah Keen head"
-            src="./src/assets/avatar.jpg"
+            src="images/avatar.jpg"
           >
           </Box>
         </Grid>

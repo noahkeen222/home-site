@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
           <Grid container alignItems="center" size="auto" gap={2}>
             <Avatar
               onClick={handleHomeClick}
-              src={new URL('../assets/avatar.jpg', import.meta.url).href}
+              src="images/avatar.jpg"
               sx={{ width: 40, height: 40, cursor: 'pointer' }}
             />
             <Typography
