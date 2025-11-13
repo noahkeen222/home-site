@@ -1,16 +1,16 @@
-import React from "react";
+import type { FC } from "react";
 import { Link } from "react-router-dom";
 import {
   Box,
   Container,
-  Grid,
   Typography,
   Link as MuiLink,
   IconButton,
+  Stack,
 } from "@mui/material";
 import { Twitter, LinkedIn, Instagram } from "@mui/icons-material";
 
-const Footer: React.FC = () => {
+const Footer: FC = () => {
   return (
     <Box
       component="footer"
@@ -25,12 +25,12 @@ const Footer: React.FC = () => {
       }}
     >
       <Container>
-        <Grid container spacing={4}>
-          <Grid size={6}>
+        <Stack direction="row" spacing={4}>
+          <Box sx={{ flex: '1 1 50%' }}>
             <Typography variant="h6" gutterBottom>
               Navigation
             </Typography>
-            <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+            <Stack spacing={1}>
               <MuiLink
                 component={Link}
                 to="home"
@@ -55,14 +55,14 @@ const Footer: React.FC = () => {
               >
                 Contact
               </MuiLink>
-            </Box>
-          </Grid>
+            </Stack>
+          </Box>
 
-          <Grid size={6}>
+          <Box sx={{ flex: '1 1 50%' }}>
             <Typography variant="h6" gutterBottom>
               Connect
             </Typography>
-            <Box sx={{ display: "flex", gap: 1 }}>
+            <Stack direction="row" spacing={1}>
               <IconButton
                 component="a"
                 href="https://twitter.com/noahkeen22"
@@ -87,9 +87,9 @@ const Footer: React.FC = () => {
               >
                 <Instagram />
               </IconButton>
-            </Box>
-          </Grid>
-        </Grid>
+            </Stack>
+          </Box>
+        </Stack>
 
         <Box sx={{ marginTop: 4, textAlign: "center" }}>
           <Typography variant="body2">
