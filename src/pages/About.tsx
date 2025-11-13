@@ -47,12 +47,12 @@ const About: React.FC = () => {
             {' '}page.
           </Typography>
         </Grid>
-        <Grid size={2}>
+        <Grid display={'flex'} size={{xs: 12, lg: 2}} justifyContent={'center'} alignContent={'center'}>
           <Box
             component="img"
             sx={{
-              height: '10vw',
-              width: 'auto',
+              height: { xs: 'auto', lg: '15vw' },
+              width: { xs: '50vw', lg: 'auto' },
               border: 5,
               borderRadius: '16px',
               borderColor: '#3d3672'

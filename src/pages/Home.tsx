@@ -22,6 +22,7 @@ const Home: React.FC = () => {
             There isnt much here yet but check
             back later for more cool updates and fun stuff.
             <br />
+            <br />
             Thank you for visiting!
           </Typography>
         </Grid>
