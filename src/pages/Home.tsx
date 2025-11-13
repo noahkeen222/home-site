@@ -29,7 +29,7 @@ const Home: React.FC = () => {
             component="img"
             sx={{
               height: {xs:'auto' ,md:'auto',lg:'22vw'},
-              width: {xs:'80vw' ,md:'50vw',lg:'auto'},
+              width: {xs:'70vw' ,md:'50vw',lg:'auto'},
               border: 5,
               borderRadius: '16px',
               borderColor: '#3d3672'

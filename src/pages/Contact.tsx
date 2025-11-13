@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
             component="img"
             sx={{
               height: { xs: 'auto', md: '30vw', lg: '15vw' },
-              width: { xs: '80vw', md:'auto', lg: 'auto' },
+              width: { xs: '70vw', md:'auto', lg: 'auto' },
               border: 5,
               borderRadius: '16px',
               borderColor: '#3d3672',
