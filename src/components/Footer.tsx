@@ -35,7 +35,7 @@ const Footer: FC = () => {
                 component={Link}
                 to="home"
                 color="inherit"
-                underline="hover"
+                underline="none"
               >
                 Home
               </MuiLink>
@@ -43,7 +43,7 @@ const Footer: FC = () => {
                 component={Link}
                 to="about"
                 color="inherit"
-                underline="hover"
+                underline="none"
               >
                 About
               </MuiLink>
@@ -51,7 +51,7 @@ const Footer: FC = () => {
                 component={Link}
                 to="contact"
                 color="inherit"
-                underline="hover"
+                underline="none"
               >
                 Contact
               </MuiLink>
