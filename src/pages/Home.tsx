@@ -1,16 +1,14 @@
 import React from "react";
-import { Typography, Grid, Container } from "@mui/material";
+import { Typography, Grid, Container, Box } from "@mui/material";
 
 const Home: React.FC = () => {
   return (
     <Container>
-      <Grid container spacing={4} sx={{ py: 8, px: 3 }}>
+      <Grid container spacing={{ xs: 2, sm: 3, md: 4 }} sx={{ py: { xs: 4, sm: 6, md: 8 }, px: { xs: 2, sm: 3 } }} justifyContent={'space-around'}>
         <Grid size={12}>
           <Typography
             variant="h2"
-            component="h1"
-            gutterBottom
-            sx={{ fontSize: "3.5rem" }}
+            sx={{ fontSize: { xs: "2rem", sm: "2.5rem", md: "3.5rem" }}}
           >
             Welcome Home
           </Typography>
@@ -25,6 +23,21 @@ const Home: React.FC = () => {
             <br />
             Thank you for visiting!
           </Typography>
+        </Grid>
+        <Grid display="flex" size={12} justifyContent="center" alignItems="center">
+          <Box
+            component="img"
+            sx={{
+              height: {xs:'auto' ,md:'auto',lg:'22vw'},
+              width: {xs:'80vw' ,md:'50vw',lg:'auto'},
+              border: 5,
+              borderRadius: '16px',
+              borderColor: '#3d3672'
+            }}
+            alt="Shoggoth the African Dwarf Frog looking wistfully in the cornner"
+            src="images/shoggoth.jpg"
+          >
+          </Box>
         </Grid>
       </Grid>
     </Container>
