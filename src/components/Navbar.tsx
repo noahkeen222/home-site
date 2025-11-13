@@ -20,11 +20,7 @@ const Navbar: React.FC = () => {
     <AppBar
       position="sticky"
       sx={{
-        top: 0,
-        width: "100%",
         bgcolor: "#3d3672",
-        backgroundImage: "none",
-        boxShadow: "none",
       }}
     >
       <Toolbar>

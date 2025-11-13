@@ -5,7 +5,7 @@ const Contact: React.FC = () => {
   return (
     <Container maxWidth="lg">
       <Grid container
-         spacing={{ xs: 2, sm: 3, md: 4 }} sx={{ py: { xs: 4, sm: 6, md: 8 }, px: { xs: 2, sm: 3 } }} justifyContent={'space-around'}
+        spacing={{ xs: 2, sm: 3, md: 4 }} sx={{ py: { xs: 4, sm: 6, md: 8 }, px: { xs: 2, sm: 3 } }} justifyContent={'space-around'}
       >
         <Grid size={12}>
           <Typography
@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
             (in order of typical usage)
           </Typography>
         </Grid>
-        <Grid size={{ xs: 12, md: 5, lg: 5 }}>
+        <Grid size={{ xs: 12, md: 6, lg: 5 }}>
           <Typography
             variant="body1"
             gutterBottom
@@ -88,12 +88,12 @@ const Contact: React.FC = () => {
             </Link>
           </Typography>
         </Grid>
-        <Grid display={'flex'} size={{ xs: 12, md:6, lg: 6 }} justifyContent={'center'} alignContent={'center'} >
+        <Grid size={{ xs: 12, md: 6, lg: 6 }} >
           <Box
             component="img"
             sx={{
               height: { xs: 'auto', md: '30vw', lg: '15vw' },
-              width: { xs: '70vw', md:'auto', lg: 'auto' },
+              width: { xs: '70vw', md: 'auto', lg: 'auto' },
               border: 5,
               borderRadius: '16px',
               borderColor: '#3d3672',
