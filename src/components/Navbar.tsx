@@ -20,7 +20,7 @@ const Navbar: FC = () => {
     <AppBar
       position="static"
       sx={{
-        bgcolor: "#3d3672",
+        bgcolor: "#443c82",
       }}
     >
       <Toolbar sx={{ minHeight: { xs: 56, sm: 64 } }}>

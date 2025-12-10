@@ -1,8 +1,27 @@
 import type { FC } from "react";
+import * as React from "react";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
 import { Container, Typography, Box, Link as MUILink, Stack } from "@mui/material";
+import Modal from '@mui/material/Modal'
 import { Link } from "react-router-dom";
 
 const About: FC = () => {
+  const [expanded, setExpanded] = React.useState<string | false>(false);
+
+  const handleChange =
+    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpanded(isExpanded ? panel : false);
+    };
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+
+  
   return (
     <Container maxWidth="lg">
       <Stack spacing={{ xs: 2, sm: 3, md: 4 }} sx={{ py: { xs: 4, sm: 6, md: 8 }, px: { xs: 2, sm: 3 } }}>
@@ -12,13 +31,11 @@ const About: FC = () => {
         >
           About Me
         </Typography>
-        
         <Stack 
-          direction={{ xs: 'column', lg: 'row' }} 
+          direction={{ xs: 'column', md: 'row' }} 
           spacing={{ xs: 2, sm: 3, md: 4 }}
-          alignItems={{ xs: 'center', lg: 'flex-start' }}
         >
-          <Box sx={{ flex: { lg: '1 1 auto' }, maxWidth: { lg: '75%' } }}>
+          <Box>
             <Typography
               variant="body1"
               gutterBottom
@@ -27,7 +44,7 @@ const About: FC = () => {
               Hey 👋 I'm Noah. I'm a budding software developer and network engineer who just graduated and am excited to start on some interesting projects that make
               a positive impact. I am very proactive and diligent when it comes to my work and enjoy expanding my knowledge into new areas more than anything.
               I take pride in my mindset of continuous growth and development in my life and believe strongly in a skillset that is as wide as it is
-              tall. You can read further below on my philosophy, story, and hobbies that I fill my time and mind with. Thank you again for visiting! and please
+              tall. You can read further below on my story, projects, and hobbies that I fill my time and mind with. Thank you again for visiting! and please
               dont hesitate to reach out with any of the links on my {' '}
               <MUILink component={Link} to="/contact" color="inherit" underline="none">
                 contact
@@ -40,8 +57,8 @@ const About: FC = () => {
             <Box
               component="img"
               sx={{
-                height: { xs: 'auto', md: '50vw', lg: '15vw' },
-                width: { xs: '70vw', md: 'auto', lg: 'auto' },
+                height: { xs: '60vw', s: '60vw', md: '15rem', lg: '15rem' },
+                width: { xs: 'auto', s: 'auto', md: 'auto', lg: 'auto' },
                 border: 5,
                 borderRadius: '16px',
                 borderColor: '#3d3672'
@@ -51,6 +68,465 @@ const About: FC = () => {
             >
             </Box>
           </Stack>
+        </Stack>
+        <Box>
+            <Typography
+              variant="h4"
+              sx={{ fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" } }}
+            >
+              My Story
+            </Typography>
+        </Box>
+        <Stack
+          direction={{xs: "column", md:"row"}}
+          >
+           <Box> 
+            <Typography>
+              I was born and raised for the early part of my life in northern Illinois until about 6th grade. 
+              I consider it my home and pine for the day I can move back. The food, culture, and air are like 
+              nothing I've experienced elsewhere and I miss it with everything. I have always been told the phrase 
+              'where you go is where you are' but have always hoped a part of me is still there.
+              <br />
+              <br />
+              After Illinois, I moved to Ohio and have been going through the motions, more stumbling than shrewd. 
+              In Highschool I lived back and forth between Ohio and Nashville TN, moving down for a stint to attend 
+              Middle Tennessee State University to pursue a degree in computer science.
+              <br />
+              <br />
+              Nashville is an interesting place. While living there and attending college, I had to use a charter bus to get to and from school every day. 
+              At the time I did not have a driver's license, and even worse, I had completely lost my identity, on many different levels. My Mom was moving 
+              and had all of our identification documents stolen out of the van she was using, including birth certificates, SSN card, and many other personal 
+              items. Needless to say, the weight of this plus my physical and emotional weight did not make things easy for me to pursue my degree. 
+              Coming out of high school, I weighed over 300lbs and was not taking care of myself through my deep depression. This really affected my 
+              commute as I would have to pass through Broadway with parades of partying drunks and gangs of bachelorettes jeering at me and my appearance. 
+              One time in particular, someone jeered at me for wearing 'skinny jeans', THEY WERE NORMAL JEANS I WAS JUST BIG 😭. At first I was switching 
+              my degree around and away from computer science, the thing I orignially wanted to do, because of a lack of confidence in my ability to 
+              complete the degree. With all of this, it got to a point where I felt so incapable and trapped that I would just take the bus to school, 
+              go into the bathroom, and cry. After COVID hit and I had to move back to Ohio, I really couldnt keep up with my courses with them and the 
+              necessary textbooks being hundreds of miles away. Because of this, I decided to move back permanently to attend Miami University.
+              <br />
+              <br />
+              Miami University was a challenge for me in the best of ways. This was where I dug down and got myself out of the pit I found myself in. While attending, 
+              I was challenged academically, physically, and emotionally; I knew the way I thought of and treated myself was not sustainable and decided to redefine my approach to life. 
+              I learned about the Theory of Mulitple Intelligences which redefined the way I thought of myself and others and gave me a strong base of points of improvement. 
+              Since discovering this, I have intentionally done things to improve each and every area of my intelligence, opting to have a well rounded and liberal approach rather than 
+              the savant approach to learning and working. I look at great thinkers and see this thinking as well, with rennasance thinkers being centuries ahead of their time with theorizing 
+              helicopters in a time where flying was not a thought possible by most. I am in no way trying to measure myself or say I am in any way close to this level of thinking but am just saying, 
+              it works. I also made a significant effort to lose the emotional and physical weight compressing and depressing me all of these years and was somewhat successful in doing so. 
+              I remember barely being able to move around from class to class without being out of breath to crying after my first marathon. In school, I slowly started to move back to computer science. 
+              I still had to commute an hour to school every day but this time I at least had a liscence and borrowed car to do so. I started to fly through my degree, 
+              taking sprint courses in the summer and winter to get through, as I knew this was the only way out. Despite all of this, my reputation as the black sheep still loomed over me and 
+              cut into me harder than any pendulum would. I like to believe that the emotional trials I faced were hard and unwarranted but the jury is still out for this. A lot of turbulance arose 
+              with my family and I during my last year at Miami and had cut me down back into a deeper pit than I was in before. I was alone, completely. I barely came out of that semester alive 
+              from both an academic and mortal perspective, but still had to take linear algebra for my winter sprint course haha. And I did it, I got through.
+              <br />
+              I am happy. 
+            </Typography>
+            <br />
+            <br />
+            <Typography>
+              If you have taken the time to read this far, thank you so much. I want this story to show a couple of things of myself: Adaptability, intelligence, and intention. 
+              I believe these three things are what make me a great candidate for any and every cause that I apply myself to and would love to be given an opportunity to prove this. 
+              Whatever I seem to lack in knowledge, I more than make up for in intelligence and diligence. Thank you again.
+            </Typography>
+          </Box>
+        </Stack>
+        <Stack direction="column">
+          <Box>
+            <Typography
+              variant="h4"
+              sx={{ 
+                fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" }, 
+                paddingBottom: 2
+              }}
+            >
+              Projects
+            </Typography>
+          </Box>
+
+          {/* SIMS */}
+          <Accordion
+            expanded={expanded === 'panel1'}
+            onChange={handleChange('panel1')}
+            sx={{
+              bgcolor: "#5d52b1"
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ArrowDropDownIcon />}
+              aria-controls="panel2-content"
+              id="panel2-header"
+            >
+              <Typography 
+                component="span"
+                sx={{
+                  color: "#FFF",
+                  fontSize: "1.2rem"
+                }}
+              >
+                State Incentive Management System
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Box>
+                <Typography
+                  variant="h5"
+                  sx={{ 
+                    paddingBottom: 2,
+                    fontSize: '1.5rem', 
+                    color: "#FFF"
+                  }}
+                >
+                  State Incentive Management System (SIMS)
+                </Typography>
+              </Box>
+              <Stack 
+                direction={{ xs: 'column', md: 'row' }} 
+                spacing={{ xs: 2, sm: 3, md: 4 }}
+                alignItems={{ xs: 'center', lg: 'flex-start' }}
+              >
+                <Box sx={{ flex: { lg: '1 1 auto' }, maxWidth: { lg: '75%' } }}>
+                  <Typography
+                    variant="body1"
+                    gutterBottom
+                    sx={{
+                      paddingLeft: { lg: 2 },
+                      fontSize: { xs: "0.9rem", sm: "1rem" },
+                      color: "#FFF"
+                    }}
+                  >
+                    The State Incentive Management System (SIMS) is a content management system used by state-led departments of health and 
+                    individual clinics to manage their contingency management programs provided to patients with opiate and stimulant use disorder.
+                    Contingency management is an approach used by clinicians to provide patients with an incentive-based approach to help manage 
+                    substance use and other related disorders. CM is a highly effective treatment protocol for use disorders, with ~15% higher efficacy
+                    rate of patient retention when compared to standard protocols. With today's environment in the US, new protocols and platforms to support them 
+                    are vital to community and national health. SIMS allows patients to upload drug screenings to be approved by clinicians for 
+                    incentives such as gift cards, and clinicians the ability to monitor and manage screenings and approve incentives. 
+                    <br />
+                    <br />
+                    My role in the project was at the intern level due to my experience in professional-level programming. I mainly debugged and configured components
+                    to match the provided Figma model and requirements document for the desktop platform, ensuring responsiveness and best practices. With this 
+                    I gained experience working through a remote-only agile development lifecycle, sitting in on the various conducted ceremonies, React, and Atlassian 
+                    software such as Confluence and Jira. I take a lot of pride in contributing to a project with such a positive mission and impact on my community, 
+                    living in one of the states that suffers the worst from opiate use disorder made me very impassioned with this.
+                  </Typography>
+                </Box>
+                <Stack justifyContent="center" alignItems="center">
+                  <Box
+                    component="img"
+                    sx={{
+                      height: { xs: 'auto', s: 'auto', md: '15rem', lg: '15rem' },
+                      width: { xs: '60vw', s: '20rem', md: 'auto', lg: 'auto' },
+                      border: 5,
+                      borderRadius: '16px',
+                      borderColor: '#3d3672'
+                    }}
+                    alt="Noah Keen head"
+                    src="images/sims.jpg"
+                  >
+                  </Box>
+                  <br />
+                </Stack>
+              </Stack>
+            </AccordionDetails>
+          </Accordion>
+
+          {/* JANUS */}
+          <Accordion
+            expanded={expanded === 'panel2'}
+            onChange={handleChange('panel2')}
+            sx={{
+              bgcolor: "#5d52b1"
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ArrowDropDownIcon />}
+              aria-controls="panel2-content"
+              id="panel2-header"
+            >
+              <Typography 
+                component="span"
+                sx={{
+                  color: "#FFF",
+                  fontSize: "1.2rem"
+                }}
+              >
+                Janus
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Box>
+                <Typography
+                  variant="h5"
+                  sx={{ 
+                    paddingBottom: 2,
+                    fontSize: '1.5', 
+                    color: "#FFF"
+                  }}
+                >
+                  Janus
+                </Typography>
+              </Box>
+              <Stack 
+                direction={{ xs: 'column', md: 'row' }} 
+                spacing={{ xs: 2, sm: 3, md: 4 }}
+                alignItems="center"
+              >
+                <Box sx={{ flex: { lg: '1 1 auto' }, maxWidth: { lg: '75%' } }}>
+                  <Typography
+                    variant="body1"
+                    gutterBottom
+                    sx={{ 
+                      paddingLeft: { lg: 2 },
+                      fontSize: { xs: "0.9rem", sm: "1rem" },
+                      color: "#FFF"
+                    }}
+                  >
+                    Janus is another content management system, used by clinics to manage their contingency management programs provided to patients with opiate and stimulant use disorders.
+                    Janus gives patients the ability to upload drug screenings remotely to be approved by clinicians for  
+                    incentives such as gift cards, and clinicians the ability to monitor and manage screenings and approve incentives. 
+                    <br />
+                    <br />
+                    My role in the project was at the intern level due to my experience in professional-level programming. I mainly debugged and configured components
+                    to match the provided Figma model and requirements document for the Android platform, ensuring responsiveness and best practices. With this 
+                    I gained experience working through a remote-only agile development lifecycle, sitting in on the various conducted ceremonies, React, and Atlassian 
+                    software such as Confluence and Jira.
+                  </Typography>
+                </Box>
+                <Stack justifyContent="center" alignItems="center">
+                  <Box
+                    component="img"
+                    sx={{
+                      height: { xs: 'auto', s: 'auto', md: '15rem', lg: '15rem' },
+                      width: { xs: '20rem', s: '20rem', md: 'auto', lg: 'auto' },
+                      border: 5,
+                      borderRadius: '16px',
+                      borderColor: '#3d3672'
+                    }}
+                    alt="Noah Keen head"
+                    src="images/janus.jpg"
+                  >
+                  </Box>
+                </Stack>
+              </Stack>
+            </AccordionDetails>
+          </Accordion>
+
+          {/* MIAMI AI TUTOR */}
+          <Accordion
+            expanded={expanded === 'panel3'}
+            onChange={handleChange('panel3')}
+            sx={{
+              bgcolor: "#5d52b1"
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ArrowDropDownIcon />}
+              aria-controls="panel2-content"
+              id="panel2-header"
+            >
+              <Typography 
+                component="span"
+                sx={{
+                  color: "#fff",
+                  fontSize: "1.2rem"
+                }}
+              >Miami AI Tutor</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Box>
+                <Typography
+                  variant="h5"
+                  sx={{ 
+                    paddingBottom: 2,
+                    fontSize: '1.5rem', 
+                    color: "#FFF"
+                  }}
+                >
+                  Miami AI Tutor
+                </Typography>
+              </Box>
+              <Stack 
+                direction={{ xs: 'column', lg: 'row' }} 
+                spacing={{ xs: 2, sm: 3, md: 4 }}
+                alignItems={{ xs: 'center', lg: 'flex-start' }}
+              >
+                <Box sx={{ flex: { lg: '1 1 auto' }, maxWidth: { lg: '75%' } }}>
+                  <Typography
+                    variant="body1"
+                    gutterBottom
+                    sx={{ 
+                      paddingLeft: { lg: 2 },
+                      fontSize: { xs: "0.9rem", sm: "1rem" },
+                      color: "#fff"
+                    }}
+                  >
+                    The Miami AI Tutor was a capstone project I worked on during my senior year for my degree. This project aimed to provide
+                    students with an academic frendly AI tutor that gave students advice on topics covered by a class as well as adhering to
+                    academic policies outlined for AI usage and general study. The project would process the syllabi, uploaded by administrators or
+                    other faculty, and adjust prompts to align with that course, students could then go in and use AI tutors provided for their class.
+                    Originally, this project started as three separate teams of five for different subject tutors, but then combined into a general AI 
+                    tutor quickly after the project began.
+                    <br />
+                    <br />
+                    My role in the project was a backend engineer and initial researcher for the tech stack that we would end up using, React frontend
+                    with Bootstrap, Flask for the API, and MySQL for database management. This stack was primarily chosen because of previous experience
+                    of different group members as well as the easier setup and learning curve required to create a simple project. I built out the API routes
+                    for the chat logging to be stored in the database as well as routes for admin accesss. I also built the GitLab CI/CD pipeline to streamline
+                    the process for testing, building, and deploying to the remote server provided by the school. Overall, the main difficulty of the project arose
+                    from both the saturation of team size from overlap and mismanagement of roles and responsibilites. Navigating through this reinforced for me
+                    the importance of project planning and organization, proving the adage of 'most projects fail in planning'. Despite this, we ended up receiving
+                    third for the CSE department's outsanding project award from both final product quality and the teams tenacity.
+                  </Typography>
+                </Box>
+                <Stack justifyContent="center" alignItems="center">
+                  <Box
+                    onClick={handleOpen}
+                    component="img"
+                    sx={{
+                      cursor: 'pointer',
+                      height: { xs: 'auto', s: 'auto', md: 'auto', lg: '15rem' },
+                      width: { xs: '25rem', s: '25rem', md: '25rem', lg: 'auto' },
+                      border: 5,
+                      borderRadius: '16px',
+                      borderColor: '#3d3672'
+                    }}
+                    alt="Noah Keen head"
+                    src="images/ai-tutor.png"
+                  >
+                  </Box>
+                  <Modal
+                    open={open}
+                    onClose={handleClose}
+                  >
+                    <Box
+                    component="img"
+                    sx={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      bgcolor: 'background.paper',
+                      boxShadow: 24,
+                      height: { xs: 'auto', s: 'auto', md: 'auto', lg: 'auto' },
+                      width: { xs: '90vw', s: '90vw', md: '70vw', lg: '60vw' },
+                      border: 5,
+                      borderRadius: '16px',
+                      borderColor: '#3d3672'
+                    }}
+                    alt="Noah Keen head"
+                    src="images/ai-tutor.png"
+                  ></Box>
+                  </Modal>
+                </Stack>
+              </Stack>
+            </AccordionDetails>
+          </Accordion>
+
+          {/* AQUALAD */}
+          <Accordion
+            expanded={expanded === 'panel4'}
+            onChange={handleChange('panel4')}
+            sx={{
+              bgcolor: "#5d52b1"
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ArrowDropDownIcon />}
+              aria-controls="panel2-content"
+              id="panel2-header"
+            >
+              <Typography 
+                component="span"
+                sx={{
+                  color: "#fff",
+                  fontSize: "1.2rem"
+                }}
+              >
+                Aqua CMS
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Box>
+                <Typography
+                  variant="h5"
+                  sx={{ 
+                    paddingBottom: 2,
+                    fontSize: '1.5rem', 
+                    color: "#FFF"
+                  }}
+                >
+                  Aqualad
+                </Typography>
+              </Box>
+              <Stack 
+                direction={{ xs: 'column', lg: 'row' }} 
+                spacing={{ xs: 2, sm: 3, md: 4 }}
+                alignItems={{ xs: 'center', lg: 'flex-start' }}
+              >
+                <Box sx={{ flex: { lg: '1 1 auto' }, maxWidth: { lg: '75%' } }}>
+                  <Typography
+                    variant="body1"
+                    sx={{ 
+                      paddingLeft: { lg: 2 },
+                      fontSize: { xs: "0.9rem", sm: "1rem" },
+                      color: "#fff"
+                  }}
+                  >
+                    Aqualad is the current big project that I'm working on, it is a content management system for intelligent aquascaping planning and upkeep. The final product
+                    will include an interface for users to manage different tanks, their stock, schedules such as feeding, circadian, water changes, etc, and it will
+                    calculate bioload depending on the biomass and plant volume of the tank and give reccomendations for the fishkeeper to adjust schedules, stock, etc.
+                    <br />
+                    <br />
+                    I started this project to create a system to use myself beacuse, as you will see below, I am very passionate about keeping fish and caring for them. I love 
+                    aquascaping and want the hobby to be more beginner friendly when it comes to setting up a new tank and caring for it. While working at PetSmart I saw firsthand
+                    many customers wanting to start fish tanks for themselves or their children and not having any idea of what it takes to run and upkeep a tank successfully. Many of these 
+                    instances would vary from just minor fixes, such as the ammonia being too high or they did not add conditioner before adding fish to care advice like stocking a tank
+                    properly, the schedules that came with it, and how to conduct water changes. Much of this information online is disaggregated and something you need to really want to put
+                    a decent amount of time and effort into in order to do well, having a platform that not only aggregated this advice to one place but also gave live feedback based on the 
+                    user's current tank parameters is something the hobby really needs.
+                  </Typography>
+                </Box>
+                <Stack justifyContent="center" alignItems="center">
+                  <Box
+                    component="img"
+                    sx={{
+                      height: { xs: 'auto', s: 'auto', md: '15rem', lg: '15rem' },
+                      width: { xs: '20rem', s: '20rem', md: 'auto', lg: 'auto' },
+                      border: 5,
+                      borderRadius: '16px',
+                      borderColor: '#3d3672'
+                    }}
+                    alt="Noah Keen head"
+                    src="images/mumu.jpg"
+                  >
+                  </Box>
+                </Stack>
+              </Stack>
+            </AccordionDetails>
+          </Accordion>
+        </Stack>
+        <Stack
+        direction="column">
+          <Box>
+            <Typography
+              variant="h4"
+              sx={{ fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" } }}
+            >
+              Hobbies
+            </Typography>
+          </Box>
+        </Stack>
+        <Stack>
+          <Box sx={{ flex: { lg: '1 1 auto' }, maxWidth: { lg: '75%' } }}>
+            <Typography
+            variant="body1"
+            gutterBottom
+            sx={{ fontSize: { xs: "0.9rem", sm: "1rem" } }}
+            >
+              None lol (jk (?))
+            </Typography>
+          </Box>
         </Stack>
       </Stack>
     </Container>

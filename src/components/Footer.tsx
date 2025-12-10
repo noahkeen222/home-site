@@ -15,7 +15,7 @@ const Footer: FC = () => {
     <Box
       component="footer"
       sx={{
-        bgcolor: "#3d3672",
+        bgcolor: "#443c82",
         color: "#fff",
         py: 4,
         marginTop: "auto",
