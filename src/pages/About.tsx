@@ -106,7 +106,7 @@ const About: FC = () => {
               necessary textbooks being hundreds of miles away. Because of this, I decided to move back permanently to attend Miami University.
               <br />
               <br />
-              Miami University was a challenge for me in the best of ways. This was where I dug down and got myself out of the pit I found myself in, pendulum and all. While attending, 
+              Miami University was a challenge for me in the best of ways. This was where I dug down and got myself out of the pit I found myself in. While attending, 
               I was challenged academically, physically, and emotionally; I knew the way I thought of and treated myself was not sustainable and decided to redefine my approach to life. 
               I learned about the Theory of Mulitple Intelligences which redefined the way I thought of myself and others and gave me a strong base of points of improvement. 
               Since discovering this, I have intentionally done things to improve each and every area of my intelligence, opting to have a well rounded and liberal approach rather than 
