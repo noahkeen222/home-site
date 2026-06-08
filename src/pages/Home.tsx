@@ -34,7 +34,7 @@ const Home: FC = () => {
               borderRadius: '16px',
               borderColor: '#3d3672'
             }}
-            alt="Shoggoth the African Dwarf Frog looking wistfully in the cornner"
+            alt="Shoggoth the African Dwarf Frog looking wistfully in the corner"
             src="images/shoggoth.jpg"
           >
           </Box>

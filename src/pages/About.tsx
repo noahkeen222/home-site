@@ -216,12 +216,12 @@ const About: FC = () => {
                     component="img"
                     sx={{
                       height: { xs: 'auto', s: 'auto', md: '15rem', lg: '15rem' },
-                      width: { xs: '60vw', s: '20rem', md: 'auto', lg: 'auto' },
+                      width: { xs: '70vw', s: '20rem', md: 'auto', lg: 'auto' },
                       border: 5,
                       borderRadius: '16px',
                       borderColor: '#3d3672'
                     }}
-                    alt="Noah Keen head"
+                    alt="SIMS Logo"
                     src="images/sims.jpg"
                   >
                   </Box>
@@ -298,12 +298,12 @@ const About: FC = () => {
                     component="img"
                     sx={{
                       height: { xs: 'auto', s: 'auto', md: '15rem', lg: '15rem' },
-                      width: { xs: '20rem', s: '20rem', md: 'auto', lg: 'auto' },
+                      width: { xs: '70vw', s: '20rem', md: 'auto', lg: 'auto' },
                       border: 5,
                       borderRadius: '16px',
                       borderColor: '#3d3672'
                     }}
-                    alt="Noah Keen head"
+                    alt="Janus Logo"
                     src="images/janus.jpg"
                   >
                   </Box>
@@ -386,7 +386,7 @@ const About: FC = () => {
                     sx={{
                       cursor: 'pointer',
                       height: { xs: 'auto', s: 'auto', md: 'auto', lg: '15rem' },
-                      width: { xs: '25rem', s: '25rem', md: '25rem', lg: 'auto' },
+                      width: { xs: '80vw', s: '25rem', md: '25rem', lg: 'auto' },
                       border: 5,
                       borderRadius: '16px',
                       borderColor: '#3d3672'
@@ -492,12 +492,12 @@ const About: FC = () => {
                     component="img"
                     sx={{
                       height: { xs: 'auto', s: 'auto', md: '15rem', lg: '15rem' },
-                      width: { xs: '20rem', s: '20rem', md: 'auto', lg: 'auto' },
+                      width: { xs: '70vw', s: '20rem', md: 'auto', lg: 'auto' },
                       border: 5,
                       borderRadius: '16px',
                       borderColor: '#3d3672'
                     }}
-                    alt="Noah Keen head"
+                    alt="Mumu the african dwarf frog"
                     src="images/mumu.jpg"
                   >
                   </Box>
