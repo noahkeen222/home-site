@@ -154,8 +154,8 @@ const About: FC = () => {
           >
             <AccordionSummary
               expandIcon={<ArrowDropDownIcon />}
-              aria-controls="panel2-content"
-              id="panel2-header"
+              aria-controls="panel1-content"
+              id="panel1-header"
             >
               <Typography 
                 component="span"
@@ -322,8 +322,8 @@ const About: FC = () => {
           >
             <AccordionSummary
               expandIcon={<ArrowDropDownIcon />}
-              aria-controls="panel2-content"
-              id="panel2-header"
+              aria-controls="panel3-content"
+              id="panel3-header"
             >
               <Typography 
                 component="span"
@@ -508,16 +508,16 @@ const About: FC = () => {
 
           {/* Runappi */}
           <Accordion
-            expanded={expanded === 'panel1'}
-            onChange={handleChange('panel1')}
+            expanded={expanded === 'panel5'}
+            onChange={handleChange('panel5')}
             sx={{
               bgcolor: "#5d52b1"
             }}
           >
             <AccordionSummary
               expandIcon={<ArrowDropDownIcon />}
-              aria-controls="panel2-content"
-              id="panel2-header"
+              aria-controls="panel5-content"
+              id="panel5-header"
             >
               <Typography 
                 component="span"
@@ -581,16 +581,16 @@ const About: FC = () => {
 
           {/* NPES */}
           <Accordion
-            expanded={expanded === 'panel1'}
-            onChange={handleChange('panel1')}
+            expanded={expanded === 'panel6'}
+            onChange={handleChange('panel6')}
             sx={{
               bgcolor: "#5d52b1"
             }}
           >
             <AccordionSummary
               expandIcon={<ArrowDropDownIcon />}
-              aria-controls="panel2-content"
-              id="panel2-header"
+              aria-controls="panel6-content"
+              id="panel6-header"
             >
               <Typography 
                 component="span"
@@ -653,7 +653,7 @@ const About: FC = () => {
           </Box>
         </Stack>
         <Stack>
-          <Box sx={{ flex: { lg: '1 1 auto' }, maxWidth: { lg: '75%' } }}>
+          <Box>
             <Typography
             variant="body1"
             gutterBottom
@@ -662,9 +662,12 @@ const About: FC = () => {
               My main hobby is running, in fact my current project, that I have fast tracked, is my own personal run tracker! I have made such
               strides with this hobby and feel very free with it. Of the races I have done I have placed very well so I have hope for the 
               future of this endevor.
+              <br />
+              <br />
               <a href="https://rtrt.me/ulink/TLMRA/TLMR-STMALACHI-2026/tracker/RES57LXF/focus">
                 St. Patricks Day Run Results (World Record for Most Kilted Runners)
               </a>
+              <br />
               <a href="https://runsignup.com/Race/Results/45754/IndividualResult/RXdSt?resultSetId=652538#U123879607">
                 Blossom Time Run Results
               </a>
