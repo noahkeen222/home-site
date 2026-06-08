@@ -505,6 +505,141 @@ const About: FC = () => {
               </Stack>
             </AccordionDetails>
           </Accordion>
+
+          {/* Runappi */}
+          <Accordion
+            expanded={expanded === 'panel1'}
+            onChange={handleChange('panel1')}
+            sx={{
+              bgcolor: "#5d52b1"
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ArrowDropDownIcon />}
+              aria-controls="panel2-content"
+              id="panel2-header"
+            >
+              <Typography 
+                component="span"
+                sx={{
+                  color: "#FFF",
+                  fontSize: "1.2rem"
+                }}
+              >
+                Runappi
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Box>
+                <Typography
+                  variant="h5"
+                  sx={{ 
+                    paddingBottom: 2,
+                    fontSize: '1.5rem', 
+                    color: "#FFF"
+                  }}
+                >
+                  Runappi
+                </Typography>
+              </Box>
+              <Stack 
+                direction={{ xs: 'column', md: 'row' }} 
+                spacing={{ xs: 2, sm: 3, md: 4 }}
+                alignItems={{ xs: 'center', lg: 'flex-start' }}
+              >
+                <Box sx={{ flex: { lg: '1 1 auto' }, maxWidth: { lg: '75%' } }}>
+                  <Typography
+                    variant="body1"
+                    gutterBottom
+                    sx={{
+                      paddingLeft: { lg: 2 },
+                      fontSize: { xs: "0.9rem", sm: "1rem" },
+                      color: "#FFF"
+                    }}
+                  >
+                    Currently a large part of my life is persuing long distance running goals and when I say long distance I mean the longest of distances, 
+                    at a competive level no less. As you may have read in my story, I used to be extremely overweight during my pivitol developmental years. 
+                    The more and more research and work I put into running, the more I realize I need something that my peers do not have to close the gap. 
+                    This gap is something I feel heavily, I understand it is not about running the same speed, I need to run faster in order to close this, much faster.
+                    After modifying and optimizing my diet and routine to carry my volume I realize there are many other compounding factors 
+                    that also impact my running capability. This is where Runappi comes into play.
+                    <br />
+                    <br />
+                    Runappi is a tool that I will use to build visualiztions, analytics, and centralized logging of my running endeavors. I have built this
+                    to run and deploy to Google Cloud Platform, utilizing their always free e2 micro and peristant disc to house my application and data. The 
+                    data is uploaded from my IPhone via shortcut that sends out a JSON of my updated biometrics and workouts upon manual or scheduled activation.
+                    Further iterations of this app will be implemented with machine learning to make predictive insights into my running trends and provide weights
+                    and considerations on the different variables affecting my running performance. After the inital data collection period I will implement a small
+                    nerual network to give suggestions of regemine, track trends, and give predictive timelines to ensure I am fit to accomplish my goals.
+                    As of right now I know that this will most likely not be scaleable with the always free tier and plan on re-arcitecturing into a serverless upload via
+                    cloud functions and a data silo, once budget permits.
+                  </Typography>
+                </Box>
+              </Stack>
+            </AccordionDetails>
+          </Accordion>
+
+          {/* NPES */}
+          <Accordion
+            expanded={expanded === 'panel1'}
+            onChange={handleChange('panel1')}
+            sx={{
+              bgcolor: "#5d52b1"
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ArrowDropDownIcon />}
+              aria-controls="panel2-content"
+              id="panel2-header"
+            >
+              <Typography 
+                component="span"
+                sx={{
+                  color: "#FFF",
+                  fontSize: "1.2rem"
+                }}
+              >
+                NPES: Noah Picture Expert Service
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Box>
+                <Typography
+                  variant="h5"
+                  sx={{ 
+                    paddingBottom: 2,
+                    fontSize: '1.5rem', 
+                    color: "#FFF"
+                  }}
+                >
+                  Noah Picture Expert Service (NPES)
+                </Typography>
+              </Box>
+              <Stack 
+                direction={{ xs: 'column', md: 'row' }} 
+                spacing={{ xs: 2, sm: 3, md: 4 }}
+                alignItems={{ xs: 'center', lg: 'flex-start' }}
+              >
+                <Box sx={{ flex: { lg: '1 1 auto' }, maxWidth: { lg: '75%' } }}>
+                  <Typography
+                    variant="body1"
+                    gutterBottom
+                    sx={{
+                      paddingLeft: { lg: 2 },
+                      fontSize: { xs: "0.9rem", sm: "1rem" },
+                      color: "#FFF"
+                    }}
+                  >
+                    So much do I find myself trying to convert media from one encoding to another, or download from a website, or do whatever with it and have to search for and open a 
+                    website that is defenitly stealing my data if not injecting data unbeknownst to me. Not only that, it just eats up my resources because I always forget to close the tab 
+                    in the end.. This application will be my all in one place to do just that! Currently the MVP of this project is a serverless azure fuction application that will take in 
+                    a link to youtube or twitter and convert the sent media to a dowloadable form with encoding specified by the user, where applicable. 
+                    This is just a quality of life and peace of mind project.
+                  </Typography>
+                </Box>
+              </Stack>
+            </AccordionDetails>
+          </Accordion>
         </Stack>
         <Stack
         direction="column">
@@ -524,7 +659,15 @@ const About: FC = () => {
             gutterBottom
             sx={{ fontSize: { xs: "0.9rem", sm: "1rem" } }}
             >
-              None lol (jk (?))
+              My main hobby is running, in fact my current project, that I have fast tracked, is my own personal run tracker! I have made such
+              strides with this hobby and feel very free with it. Of the races I have done I have placed very well so I have hope for the 
+              future of this endevor.
+              <a href="https://rtrt.me/ulink/TLMRA/TLMR-STMALACHI-2026/tracker/RES57LXF/focus">
+                St. Patricks Day Run Results (World Record for Most Kilted Runners)
+              </a>
+              <a href="https://runsignup.com/Race/Results/45754/IndividualResult/RXdSt?resultSetId=652538#U123879607">
+                Blossom Time Run Results
+              </a>
             </Typography>
           </Box>
         </Stack>
