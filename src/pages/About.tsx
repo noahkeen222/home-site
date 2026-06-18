@@ -604,16 +604,16 @@ const About: FC = () => {
 
           {/* Databricks Projects */}
           <Accordion
-            expanded={expanded === 'panel5'}
-            onChange={handleChange('panel5')}
+            expanded={expanded === 'panel6'}
+            onChange={handleChange('panel6')}
             sx={{
               bgcolor: "#5d52b1"
             }}
           >
             <AccordionSummary
               expandIcon={<ArrowDropDownIcon />}
-              aria-controls="panel5-content"
-              id="panel5-header"
+              aria-controls="panel6-content"
+              id="panel6-header"
             >
               <Typography 
                 component="span"
@@ -622,7 +622,7 @@ const About: FC = () => {
                   fontSize: "1.2rem"
                 }}
               >
-                Runappi
+                Databricks Projects
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -655,8 +655,7 @@ const About: FC = () => {
                   >
                     Currently Im trying to pivot into data engineering and have been praciticing creating ELT pipelines and visualizations
                     via Databricks. I have so much fun with this genuienly, during my degree I loved normalizing databases during my coursework
-                    and persional persuits. After working  databases with less than intentinoal designs 
-
+                    and persional persuits. 
                   </Typography>
                 </Box>
               </Stack>
