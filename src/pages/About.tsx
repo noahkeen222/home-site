@@ -4,15 +4,35 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 import { Container, Typography, Box, Link as MUILink, Stack } from "@mui/material";
 import Modal from '@mui/material/Modal'
 import { Link } from "react-router-dom";
+
+const cookingImages = [
+  { img: 'images/IMG_6692.jpg', title: 'Cookies From afar', rows: 2, cols: 2 },
+  { img: 'images/IMG_6631.jpg', title: 'Homemade dish' },
+  { img: 'images/IMG_6625.jpg', title: 'Homemade dish' },
+  { img: 'images/IMG_6537.jpg', title: 'Homemade dish', cols: 2 },
+  { img: 'images/IMG_6442.jpg', title: 'Homemade dish', rows:2, cols: 2 },
+  { img: 'images/IMG_6438.jpg', title: 'Homemade dish', cols: 2 },
+  { img: 'images/IMG_6227.jpg', title: 'Homemade dish', rows:2 },
+  { img: 'images/IMG_6243.jpg', title: 'Homemade dish', rows: 2},
+  { img: 'images/IMG_6262.jpg', title: 'Homemade dish', cols: 2 },
+  { img: 'images/IMG_6225.jpg', title: 'Homemade dish', rows: 2, cols: 2 },
+  { img: 'images/IMG_6191.jpg', title: 'Homemade dish', rows: 2},
+  { img: 'images/IMG_6172.JPG', title: 'Homemade dish', rows: 2 },
+  { img: 'images/3E92D99B-D3A7-4CDD-B316-2B160A11B6E2.jpg', title: 'Homemade dish', rows: 2, cols: 2 },
+  { img: 'images/IMG_6104.jpg', title: 'Homemade dish', rows: 2 },
+  { img: 'images/IMG_6107.jpg', title: 'Homemade dish', rows: 2 },
+];
 
 const About: FC = () => {
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
   const handleChange =
-    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+    (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
 
@@ -45,7 +65,7 @@ const About: FC = () => {
               a positive impact. I am very proactive and diligent when it comes to my work and enjoy expanding my knowledge into new areas more than anything.
               I take pride in my mindset of continuous growth and development in my life and believe strongly in a skillset that is as wide as it is
               tall. You can read further below on my story, projects, and hobbies that I fill my time and mind with. Thank you again for visiting! and please
-              dont hesitate to reach out with any of the links on my {' '}
+              don't hesitate to reach out with any of the links on my{' '}
               <MUILink component={Link} to="/contact" color="inherit" underline="none">
                 contact
               </MUILink>
@@ -57,13 +77,13 @@ const About: FC = () => {
             <Box
               component="img"
               sx={{
-                height: { xs: '60vw', s: '60vw', md: '15rem', lg: '15rem' },
-                width: { xs: 'auto', s: 'auto', md: 'auto', lg: 'auto' },
+                height: { xs: '60vw', sm: '60vw', md: '15rem', lg: '15rem' },
+                width: { xs: 'auto', sm: 'auto', md: 'auto', lg: 'auto' },
                 border: 5,
                 borderRadius: '16px',
                 borderColor: '#3d3672'
               }}
-              alt="Noah Keen head"
+              alt="Noah Keen headshot"
               src="images/avatar.jpg"
             >
             </Box>
@@ -72,7 +92,10 @@ const About: FC = () => {
         <Box>
             <Typography
               variant="h4"
-              sx={{ fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" } }}
+              sx={{ 
+                fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" }, 
+                paddingBottom: 2
+              }}
             >
               My Story
             </Typography>
@@ -215,8 +238,8 @@ const About: FC = () => {
                   <Box
                     component="img"
                     sx={{
-                      height: { xs: 'auto', s: 'auto', md: '15rem', lg: '15rem' },
-                      width: { xs: '70vw', s: '20rem', md: 'auto', lg: 'auto' },
+                      height: { xs: 'auto', sm: 'auto', md: '15rem', lg: '15rem' },
+                      width: { xs: '70vw', sm: '20rem', md: 'auto', lg: 'auto' },
                       border: 5,
                       borderRadius: '16px',
                       borderColor: '#3d3672'
@@ -260,7 +283,7 @@ const About: FC = () => {
                   variant="h5"
                   sx={{ 
                     paddingBottom: 2,
-                    fontSize: '1.5', 
+                    fontSize: '1.5rem', 
                     color: "#FFF"
                   }}
                 >
@@ -297,8 +320,8 @@ const About: FC = () => {
                   <Box
                     component="img"
                     sx={{
-                      height: { xs: 'auto', s: 'auto', md: '15rem', lg: '15rem' },
-                      width: { xs: '70vw', s: '20rem', md: 'auto', lg: 'auto' },
+                      height: { xs: 'auto', sm: 'auto', md: '15rem', lg: '15rem' },
+                      width: { xs: '70vw', sm: '20rem', md: 'auto', lg: 'auto' },
                       border: 5,
                       borderRadius: '16px',
                       borderColor: '#3d3672'
@@ -385,13 +408,13 @@ const About: FC = () => {
                     component="img"
                     sx={{
                       cursor: 'pointer',
-                      height: { xs: 'auto', s: 'auto', md: 'auto', lg: '15rem' },
-                      width: { xs: '80vw', s: '25rem', md: '25rem', lg: 'auto' },
+                      height: { xs: 'auto', sm: 'auto', md: 'auto', lg: '15rem' },
+                      width: { xs: '80vw', sm: '25rem', md: '25rem', lg: 'auto' },
                       border: 5,
                       borderRadius: '16px',
                       borderColor: '#3d3672'
                     }}
-                    alt="Noah Keen head"
+                    alt="Miami AI Tutor screenshot"
                     src="images/ai-tutor.png"
                   >
                   </Box>
@@ -408,15 +431,15 @@ const About: FC = () => {
                       transform: 'translate(-50%, -50%)',
                       bgcolor: 'background.paper',
                       boxShadow: 24,
-                      height: { xs: 'auto', s: 'auto', md: 'auto', lg: 'auto' },
-                      width: { xs: '90vw', s: '90vw', md: '70vw', lg: '60vw' },
+                      height: { xs: 'auto', sm: 'auto', md: 'auto', lg: 'auto' },
+                      width: { xs: '90vw', sm: '90vw', md: '70vw', lg: '60vw' },
                       border: 5,
                       borderRadius: '16px',
                       borderColor: '#3d3672'
                     }}
-                    alt="Noah Keen head"
+                    alt="Miami AI Tutor screenshot"
                     src="images/ai-tutor.png"
-                  ></Box>
+                  />
                   </Modal>
                 </Stack>
               </Stack>
@@ -433,8 +456,8 @@ const About: FC = () => {
           >
             <AccordionSummary
               expandIcon={<ArrowDropDownIcon />}
-              aria-controls="panel2-content"
-              id="panel2-header"
+              aria-controls="panel4-content"
+              id="panel4-header"
             >
               <Typography 
                 component="span"
@@ -491,8 +514,8 @@ const About: FC = () => {
                   <Box
                     component="img"
                     sx={{
-                      height: { xs: 'auto', s: 'auto', md: '15rem', lg: '15rem' },
-                      width: { xs: '70vw', s: '20rem', md: 'auto', lg: 'auto' },
+                      height: { xs: 'auto', sm: 'auto', md: '15rem', lg: '15rem' },
+                      width: { xs: '70vw', sm: '20rem', md: 'auto', lg: 'auto' },
                       border: 5,
                       borderRadius: '16px',
                       borderColor: '#3d3672'
@@ -579,7 +602,69 @@ const About: FC = () => {
             </AccordionDetails>
           </Accordion>
 
+          {/* Databricks Projects */}
+          <Accordion
+            expanded={expanded === 'panel5'}
+            onChange={handleChange('panel5')}
+            sx={{
+              bgcolor: "#5d52b1"
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ArrowDropDownIcon />}
+              aria-controls="panel5-content"
+              id="panel5-header"
+            >
+              <Typography 
+                component="span"
+                sx={{
+                  color: "#FFF",
+                  fontSize: "1.2rem"
+                }}
+              >
+                Runappi
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Box>
+                <Typography
+                  variant="h5"
+                  sx={{ 
+                    paddingBottom: 2,
+                    fontSize: '1.5rem', 
+                    color: "#FFF"
+                  }}
+                >
+                  Runappi
+                </Typography>
+              </Box>
+              <Stack 
+                direction={{ xs: 'column', md: 'row' }} 
+                spacing={{ xs: 2, sm: 3, md: 4 }}
+                alignItems={{ xs: 'center', lg: 'flex-start' }}
+              >
+                <Box sx={{ flex: { lg: '1 1 auto' }, maxWidth: { lg: '75%' } }}>
+                  <Typography
+                    variant="body1"
+                    gutterBottom
+                    sx={{
+                      paddingLeft: { lg: 2 },
+                      fontSize: { xs: "0.9rem", sm: "1rem" },
+                      color: "#FFF"
+                    }}
+                  >
+                    Currently Im trying to pivot into data engineering and have been praciticing creating ELT pipelines and visualizations
+                    via Databricks. I have so much fun with this genuienly, during my degree I loved normalizing databases during my coursework
+                    and persional persuits. After working  databases with less than intentinoal designs 
+
+                  </Typography>
+                </Box>
+              </Stack>
+            </AccordionDetails>
+          </Accordion>
+
           {/* NPES */}
+          {/*
           <Accordion
             expanded={expanded === 'panel6'}
             onChange={handleChange('panel6')}
@@ -640,20 +725,28 @@ const About: FC = () => {
               </Stack>
             </AccordionDetails>
           </Accordion>
+          */}
         </Stack>
-        <Stack
-        direction="column">
+        <Stack direction="column">
           <Box>
             <Typography
               variant="h4"
-              sx={{ fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" } }}
+              sx={{ 
+                fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" }, 
+                paddingBottom: 2
+              }}
             >
               Hobbies
             </Typography>
           </Box>
-        </Stack>
-        <Stack>
           <Box>
+            <Typography
+              variant="h3"
+              gutterBottom
+              sx={{ fontSize: { xs: "0.75rem", sm: "1.25rem", md: "1.75rem" } }}
+            >
+              Running
+            </Typography>
             <Typography
             variant="body1"
             gutterBottom
@@ -663,7 +756,6 @@ const About: FC = () => {
               strides with this hobby and feel very free with it. Of the races I have done I have placed very well so I have hope for the 
               future of this endevor.
               <br />
-              <br />
               <a href="https://rtrt.me/ulink/TLMRA/TLMR-STMALACHI-2026/tracker/RES57LXF/focus">
                 St. Patricks Day Run Results (World Record for Most Kilted Runners)
               </a>
@@ -671,7 +763,66 @@ const About: FC = () => {
               <a href="https://runsignup.com/Race/Results/45754/IndividualResult/RXdSt?resultSetId=652538#U123879607">
                 Blossom Time Run Results
               </a>
+              <br />
+              <br />
             </Typography>
+          </Box>
+          <Box>
+            <Typography
+              variant="h3"
+              gutterBottom
+              sx={{ fontSize: { xs: "0.75rem", sm: "1.25rem", md: "1.75rem" } }}
+            >
+              Cooking / Baking
+            </Typography>
+            <Typography
+            variant="body1"
+            gutterBottom
+            sx={{ fontSize: { xs: "0.9rem", sm: "1rem" } }}
+            >
+              I love cooking and think I am the best at it lol, I am pretty good. I make all of my favorite foods
+              chicken, pizza, cookie, only the peak of nutrition enters my body. 
+              <br />
+              <br />
+              Here are a few of my dishes:
+            </Typography>
+            <ImageList
+              variant="quilted"
+              cols={4}
+              rowHeight={160}
+              gap={8}
+              sx={{
+                width: '100%',
+                maxHeight: { xs: 720, md: 920 },
+                overflowY: 'auto',
+                m: 0,
+                mt: 2,
+                borderRadius: '8px',
+              }}
+            >
+              {cookingImages.map((item) => (
+                <ImageListItem
+                  key={item.img}
+                  cols={item.cols ?? 1}
+                  rows={item.rows ?? 1}
+                  sx={{
+                    overflow: 'hidden',
+                    borderRadius: '8px',
+                  }}
+                >
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    loading="lazy"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                    }}
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
           </Box>
         </Stack>
       </Stack>

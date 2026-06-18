@@ -17,7 +17,7 @@ const Contact: FC = () => {
           gutterBottom
           sx={{ fontSize: { xs: "0.9rem", sm: "1rem" } }}
         >
-          Lets get in touch! Feel free to reach me at any of the below and I will try to get in contact as soon as possible.
+          Let's get in touch. Feel free to reach me at any of the below and I will try to get in contact as soon as possible.
           <br />
           (in order of typical usage)
         </Typography>
@@ -103,8 +103,7 @@ const Contact: FC = () => {
               }}
               alt="Shoggoth the African Dwarf Frog clicking heels together"
               src="images/shoggoth_heel_click.jpg"
-            >
-            </Box>
+            />
           </Stack>
         </Stack>
       </Stack>

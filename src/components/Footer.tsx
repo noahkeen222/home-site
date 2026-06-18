@@ -10,6 +10,30 @@ import {
 } from "@mui/material";
 import { Twitter, LinkedIn, Instagram } from "@mui/icons-material";
 
+const navigationLinks = [
+  { label: "Home", to: "home" },
+  { label: "About", to: "about" },
+  { label: "Contact", to: "contact" },
+] as const;
+
+const socialLinks = [
+  {
+    label: "Twitter",
+    href: "https://twitter.com/noahkeen22",
+    icon: <Twitter />,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/noah-keen-1110a6195/",
+    icon: <LinkedIn />,
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/noahkeen/",
+    icon: <Instagram />,
+  },
+] as const;
+
 const Footer: FC = () => {
   return (
     <Box
@@ -31,30 +55,17 @@ const Footer: FC = () => {
               Navigation
             </Typography>
             <Stack spacing={1}>
-              <MuiLink
-                component={Link}
-                to="home"
-                color="inherit"
-                underline="none"
-              >
-                Home
-              </MuiLink>
-              <MuiLink
-                component={Link}
-                to="about"
-                color="inherit"
-                underline="none"
-              >
-                About
-              </MuiLink>
-              <MuiLink
-                component={Link}
-                to="contact"
-                color="inherit"
-                underline="none"
-              >
-                Contact
-              </MuiLink>
+              {navigationLinks.map(({ label, to }) => (
+                <MuiLink
+                  key={to}
+                  component={Link}
+                  to={to}
+                  color="inherit"
+                  underline="none"
+                >
+                  {label}
+                </MuiLink>
+              ))}
             </Stack>
           </Box>
 
@@ -63,30 +74,19 @@ const Footer: FC = () => {
               Connect
             </Typography>
             <Stack direction="row" spacing={1}>
-              <IconButton
-                component="a"
-                href="https://twitter.com/noahkeen22"
-                target="_blank"
-                sx={{ color: "#fff" }}
-              >
-                <Twitter />
-              </IconButton>
-              <IconButton
-                component="a"
-                href="https://www.linkedin.com/in/noah-keen-1110a6195/"
-                target="_blank"
-                sx={{ color: "#fff" }}
-              >
-                <LinkedIn />
-              </IconButton>
-              <IconButton
-                component="a"
-                href="https://www.instagram.com/noahkeen/"
-                target="_blank"
-                sx={{ color: "#fff" }}
-              >
-                <Instagram />
-              </IconButton>
+              {socialLinks.map(({ label, href, icon }) => (
+                <IconButton
+                  key={href}
+                  aria-label={label}
+                  component="a"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{ color: "#fff" }}
+                >
+                  {icon}
+                </IconButton>
+              ))}
             </Stack>
           </Box>
         </Stack>

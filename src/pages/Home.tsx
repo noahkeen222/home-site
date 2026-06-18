@@ -36,8 +36,7 @@ const Home: FC = () => {
             }}
             alt="Shoggoth the African Dwarf Frog looking wistfully in the corner"
             src="images/shoggoth.jpg"
-          >
-          </Box>
+          />
         </Stack>
       </Stack>
     </Container>
