@@ -11,11 +11,11 @@ import Modal from '@mui/material/Modal'
 import { Link } from "react-router-dom";
 
 const cookingImages = [
-  { img: 'images/IMG_6692.jpg', title: 'Cookies From afar', rows: 2, cols: 2 },
-  { img: 'images/IMG_6631.jpg', title: 'Homemade dish' },
-  { img: 'images/IMG_6625.jpg', title: 'Homemade dish' },
-  { img: 'images/IMG_6537.jpg', title: 'Homemade dish', cols: 2 },
-  { img: 'images/IMG_6442.jpg', title: 'Homemade dish', rows:2, cols: 2 },
+  { img: 'images/IMG_6692.jpg', title: 'Cookies from afar', rows: 2, cols: 2 },
+  { img: 'images/IMG_6631.jpg', title: 'Honestly the best cookie I made' },
+  { img: 'images/IMG_6625.jpg', title: 'A bunch of the best cookies I made' },
+  { img: 'images/IMG_6537.jpg', title: 'Cross section of chocolate chip cookie', cols: 2 },
+  { img: 'images/IMG_6442.jpg', title: 'Pepperoni pizza', rows:2, cols: 2 },
   { img: 'images/IMG_6438.jpg', title: 'Homemade dish', cols: 2 },
   { img: 'images/IMG_6227.jpg', title: 'Homemade dish', rows:2 },
   { img: 'images/IMG_6243.jpg', title: 'Homemade dish', rows: 2},
