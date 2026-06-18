@@ -793,8 +793,6 @@ const About: FC = () => {
               gap={8}
               sx={{
                 width: '100%',
-                maxHeight: { xs: 720, md: 920 },
-                overflowY: 'auto',
                 m: 0,
                 mt: 2,
                 borderRadius: '8px',
