@@ -15,17 +15,17 @@ const cookingImages = [
   { img: 'images/IMG_6631.jpg', title: 'Honestly the best cookie I made' },
   { img: 'images/IMG_6625.jpg', title: 'A bunch of the best cookies I made' },
   { img: 'images/IMG_6537.jpg', title: 'Cross section of chocolate chip cookie', cols: 2 },
-  { img: 'images/IMG_6442.jpg', title: 'Pepperoni pizza', rows:2, cols: 2 },
-  { img: 'images/IMG_6438.jpg', title: 'Homemade dish', cols: 2 },
-  { img: 'images/IMG_6227.jpg', title: 'Homemade dish', rows:2 },
-  { img: 'images/IMG_6243.jpg', title: 'Homemade dish', rows: 2},
-  { img: 'images/IMG_6262.jpg', title: 'Homemade dish', cols: 2 },
-  { img: 'images/IMG_6225.jpg', title: 'Homemade dish', rows: 2, cols: 2 },
-  { img: 'images/IMG_6191.jpg', title: 'Homemade dish', rows: 2},
-  { img: 'images/IMG_6172.JPG', title: 'Homemade dish', rows: 2 },
-  { img: 'images/3E92D99B-D3A7-4CDD-B316-2B160A11B6E2.jpg', title: 'Homemade dish', rows: 2, cols: 2 },
-  { img: 'images/IMG_6104.jpg', title: 'Homemade dish', rows: 2 },
-  { img: 'images/IMG_6107.jpg', title: 'Homemade dish', rows: 2 },
+  { img: 'images/IMG_6172.JPG', title: 'Pepperoni pizza', rows:2, cols: 2 },
+  { img: 'images/IMG_6438.jpg', title: 'Ingredients', cols: 2 },
+  { img: 'images/IMG_6227.jpg', title: 'Calzone', rows:2 },
+  { img: 'images/IMG_6243.jpg', title: 'Burger with homemade bun', rows: 2},
+  { img: 'images/IMG_6262.jpg', title: 'Homemade taco', cols: 2 },
+  { img: 'images/IMG_6225.jpg', title: 'Attempt at calzone or pizza', rows: 2, cols: 2 },
+  { img: 'images/3E92D99B-D3A7-4CDD-B316-2B160A11B6E2.jpg', title: 'Poppy seed bagel', rows: 2},
+  { img: 'images/IMG_6192.JPG', title: 'Massive Stromboli', rows: 2 },
+  { img: 'images/IMG_6191.jpg', title: 'Rosemary salt bagel', rows: 2, cols: 2 },
+  { img: 'images/IMG_6104.jpg', title: 'Bunch of calzones', rows: 2 },
+  { img: 'images/IMG_6107.jpg', title: 'Good calzone I made in a hotel room', rows: 2 },
 ];
 
 const About: FC = () => {
@@ -742,7 +742,7 @@ const About: FC = () => {
             <Typography
               variant="h3"
               gutterBottom
-              sx={{ fontSize: { xs: "0.75rem", sm: "1.25rem", md: "1.75rem" } }}
+              sx={{ fontSize: { xs: "1rem", sm: "1.25rem", md: "1.75rem" } }}
             >
               Running
             </Typography>
@@ -755,6 +755,7 @@ const About: FC = () => {
               strides with this hobby and feel very free with it. Of the races I have done I have placed very well so I have hope for the 
               future of this endevor.
               <br />
+              <br />
               <a href="https://rtrt.me/ulink/TLMRA/TLMR-STMALACHI-2026/tracker/RES57LXF/focus">
                 St. Patricks Day Run Results (World Record for Most Kilted Runners)
               </a>
@@ -762,15 +763,15 @@ const About: FC = () => {
               <a href="https://runsignup.com/Race/Results/45754/IndividualResult/RXdSt?resultSetId=652538#U123879607">
                 Blossom Time Run Results
               </a>
-              <br />
-              <br />
             </Typography>
+            <br />
+            <br />
           </Box>
           <Box>
             <Typography
               variant="h3"
               gutterBottom
-              sx={{ fontSize: { xs: "0.75rem", sm: "1.25rem", md: "1.75rem" } }}
+              sx={{ fontSize: { xs: "1rem", sm: "1.25rem", md: "1.75rem" } }}
             >
               Cooking / Baking
             </Typography>
@@ -820,6 +821,27 @@ const About: FC = () => {
                 </ImageListItem>
               ))}
             </ImageList>
+          </Box>
+          <br />
+          <Box>
+            <Typography
+              variant="h3"
+              gutterBottom
+              sx={{ fontSize: { xs: "1rem", sm: "1.25rem", md: "1.75rem" } }}
+            >
+              Aqua Scaping
+            </Typography>
+            <Typography
+            variant="body1"
+            gutterBottom
+            sx={{ fontSize: { xs: "0.9rem", sm: "1rem" } }}
+            >
+              I also love aquascaping / fishkeeping, I have been doing this hobby for a couple of years
+              eversince I worked at PetSmart I really wanted to understand taking care of a tank not only for
+              my job but also as a personal project. Aquascaping has taught me so much and brings me so much
+              serenity, I look at how the plants grow and apply this to my own life, out of everything alive, plants
+              really know how to do it, despite everything.  
+            </Typography>
           </Box>
         </Stack>
       </Stack>
