@@ -13,14 +13,16 @@ import {
 const navigationLinks = [
   { label: "Home", to: "home" },
   { label: "About", to: "about" },
+  { label: "Projects", to: "projects" },
+  { label: "Hobbies", to: "hobbies" },
   { label: "Contact", to: "contact" },
 ] as const;
 
 const navButtonSx = {
   color: "#fff",
-  fontSize: { xs: "0.75rem", sm: "0.875rem" },
-  minWidth: { xs: "auto", sm: 64 },
-  px: { xs: 1, sm: 2 },
+  fontSize: { xs: "0.65rem", sm: "0.75rem" },
+  minWidth: { xs: "auto", sm: 48 },
+  px: { xs: 0.5, sm: 1 },
 };
 
 const Navbar: FC = () => {

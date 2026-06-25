@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import Projects from './pages/Projects';
+import Hobbies from './pages/Hobbies';
 import Contact from './pages/Contact';
 import './App.css';
 
@@ -17,6 +19,8 @@ function App() {
             <Route path="/" element={<Navigate to="home" replace />} />
             <Route path="home" element={<Home />} />
             <Route path="about" element={<About />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="hobbies" element={<Hobbies />} />
             <Route path="contact" element={<Contact />} />
             <Route path="*" element={<Home />} />
           </Routes>

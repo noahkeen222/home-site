@@ -17,8 +17,7 @@ const Home: FC = () => {
               sx={{ fontSize: { xs: "0.9rem", sm: "1rem" } }}>
           Hello 👋 welcome to my webpage!
           <br />
-          There isnt much here yet but check
-          back later for more cool updates and fun stuff.
+          Most of the stuff is in the about but Ill probably change that here in a bit, not a great look, I know...
           <br />
           <br />
           Thank you for visiting!
